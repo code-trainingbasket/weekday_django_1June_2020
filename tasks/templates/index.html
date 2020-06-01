@@ -6,5 +6,11 @@
 <body>
 	<h1>My Home Page</h1>
 	<p>This is a home page which is made using django framework.</p>
+	{{users}}
+	<hr>
+	{% for user in users %}
+		{{user}}
+		<br>
+	{% endfor %}
 </body>
 </html>

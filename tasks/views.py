@@ -4,4 +4,5 @@ from django.shortcuts import render
 
 
 def home(request):
-	return render(request,'index.html')
+	users = ['Rishabh','Sumit','Vishal']
+	return render(request,'index.html',{'users':users})

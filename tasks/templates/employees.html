@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Employees</title>
+</head>
+<body>
+	<a href="{% url 'home' %}"><button>Home</button></a>
+	<a href="{% url 'allemployees' %}"><button>Employees</button></a>
+	<h1>Employee List</h1>
+	<hr>
+	{% for employee in allemployees %}
+		{{employee.name}} ---- {{employee.designation}}--{{employee.phonenumber}}
+		<br>
+	{% endfor %}
+	<hr>
+	<center>
+	<table border="2">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Designation</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for employee in allemployees %}
+			<tr>
+				<td>{{employee.name}}</td>
+				<td>{{employee.designation}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</center>
+</body>
+</html>

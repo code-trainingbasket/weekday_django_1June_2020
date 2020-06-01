@@ -21,4 +21,5 @@ import tasks.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',tasks.views.home,name='home'),
+    path('allemployees/',tasks.views.employees, name ='allemployees'),
 ]
